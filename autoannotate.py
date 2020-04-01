@@ -97,7 +97,7 @@ def autoannotate(dataset, import_datasets, input_shape, image_shape, batch_size,
 
     print_flush('Loading model...')
     model = SSD300((input_shape[1],input_shape[0],input_shape[2]), num_classes=num_classes)  
-    model.load_weights('{basepath}ssd/weights_SSD300.hdf5'.format(basepath=base_path), by_name=True)
+    model.load_weights('{basepath}/ssd/weights_SSD300.hdf5'.format(basepath=base_path), by_name=True)
     
     print_flush("Making priors...")    
     im_in = np.random.random((1,input_shape[1],input_shape[0],input_shape[2]))
